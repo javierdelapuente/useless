@@ -7,6 +7,10 @@ on:
         description: Var1
         type: string
         default: './'
+      var2:
+        description: Var2
+        type: string
+        default: 'charm'
 
 jobs:
   debugging1:
