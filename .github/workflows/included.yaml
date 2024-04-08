@@ -1,0 +1,30 @@
+name: Included workflow
+
+on:
+  workflow_call:
+    inputs:
+      var1:
+        description: Var1
+        type: string
+        default: './'
+      var2:
+        description: Var2
+        type: string
+        default: 'charm'
+
+jobs:
+  debugging1:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: ${{ inputs.var1 }}/${{ inputs.var2 }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+      - run: |
+          pwd
+          ls
+          echo "var1 ${{ inputs.var1 }}"
+          echo "var2 ${{ inputs.var2 }}"

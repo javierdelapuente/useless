@@ -1,0 +1,16 @@
+name: Test test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: |
+          echo "Hello world"
+  inluded-workflos-tests:
+    uses: ./.github/workflows/included.yaml
