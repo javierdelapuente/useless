@@ -1,0 +1,21 @@
+name: Included workflow
+
+on:
+  workflow_call:
+    inputs:
+      var1:
+        description: var1
+        type: string
+        default: "./"
+      var1:
+        description: var2
+        type: string
+        default: "./"
+
+jobs:
+  debugging1:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: |
+          echo "var1 ${{ inputs.var1 }}"
+          echo "var2 ${{ inputs.var2 }}"
