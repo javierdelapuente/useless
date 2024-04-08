@@ -2,6 +2,11 @@ name: Included workflow
 
 on:
   workflow_call:
+    inputs:
+      var1:
+        description: Var1
+        type: string
+        default: './'
 
 jobs:
   debugging1:
