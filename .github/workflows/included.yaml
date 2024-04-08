@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-22.04
     defaults:
       run:
-        working-directory: ${{ inputs.var1 }}
+        working-directory: ${{ inputs.var1 }}/${{ inputs.var2 }}
     steps:
       - run: |
           pwd
