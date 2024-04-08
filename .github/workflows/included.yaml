@@ -15,8 +15,9 @@ on:
 jobs:
   debugging1:
     runs-on: ubuntu-22.04
-    with:
-      working-directory: ${{ inputs.var1 }}
+    defaults:
+      run:
+        working-directory: ${{ inputs.var1 }}
     steps:
       - run: |
           pwd
