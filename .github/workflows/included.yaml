@@ -20,5 +20,6 @@ jobs:
     steps:
       - run: |
           pwd
+          ls
           echo "var1 ${{ inputs.var1 }}"
           echo "var2 ${{ inputs.var2 }}"
