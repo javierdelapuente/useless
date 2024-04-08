@@ -15,7 +15,10 @@ on:
 jobs:
   debugging1:
     runs-on: ubuntu-22.04
+    with:
+      working-directory: ${{ inputs.var1 }}
     steps:
       - run: |
+          pwd
           echo "var1 ${{ inputs.var1 }}"
           echo "var2 ${{ inputs.var2 }}"
