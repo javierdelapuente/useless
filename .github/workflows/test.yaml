@@ -14,7 +14,3 @@ jobs:
           echo "Hello world"
   inluded-workflos-tests:
     uses: ./.github/workflows/included.yaml
-    secrets: inherit
-    with:
-      var1: "./"
-      var2: "./charm"

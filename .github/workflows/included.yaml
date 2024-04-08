@@ -2,15 +2,6 @@ name: Included workflow
 
 on:
   workflow_call:
-    inputs:
-      var1:
-        description: var1
-        type: string
-        default: "./"
-      var1:
-        description: var2
-        type: string
-        default: "./"
 
 jobs:
   debugging1:
