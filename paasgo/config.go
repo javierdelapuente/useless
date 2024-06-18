@@ -2,6 +2,8 @@ package paasgo
 
 import "strings"
 
+// With comment
+
 func BuildCharmConfig(environ []string) (config CharmConfig) {
 	// TODO done in a simple way. Maybe using struct tags like `env: NAME` or
 	// any other idea? (that requires reading the charmcraft.yaml some way...)
